@@ -1,0 +1,6 @@
+<mat-card *ngIf="hideBoard==false" (click)="addBoard()">
+  <mat-card-content> 
+    <h4>Creating a new board...</h4>
+  </mat-card-content>
+</mat-card>
+<board *ngIf="hideBoard==true" (hide-board)="displayEntryBoard($event)"></board>

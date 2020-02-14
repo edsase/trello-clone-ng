@@ -1,0 +1,30 @@
+<mat-card class="activity-list">
+    <mat-card-title>
+        <mat-card-title>
+            {{ activity.name }}
+        </mat-card-title>
+        <mat-divider></mat-divider>
+        
+    </mat-card-title>
+    <mat-card-content>
+        <form>
+            <mat-form-field>
+                <mat-label>add activity to list</mat-label>
+                <input [(ngModel)]="activityName" matInput name="listName" #listName (keyup.enter)="createSubActivity(listName.value)"> 
+            </mat-form-field>
+        </form>
+
+        <mat-list>
+            <mat-list-item [class.strike-out]="subAct.done" *ngFor="let subAct of activity.activityList.slice(0,2)"> 
+                {{subAct.name}} 
+                <span *ngIf="!subAct.done"  (click)="onStatusChange(subAct)" class="done-icon">
+                    <mat-icon inline="true">done</mat-icon>
+                </span> 
+                <span *ngIf="subAct.done"  (click)="onStatusChange(subAct)" class="done-icon">
+                    <mat-icon inline="true">undo</mat-icon>
+                </span> 
+            </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+</mat-card>
+

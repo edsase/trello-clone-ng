@@ -1,0 +1,28 @@
+
+<mat-card>
+    <mat-card-title>{{project.name}}</mat-card-title>
+</mat-card>
+<mat-grid-list cols="3" rowHeight="200px">
+    <mat-grid-tile
+        *ngFor="let activity of project.activities">
+      <activity-list [project-name]="project.name" [activity]="activity"></activity-list>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-card *ngIf="hideActivity==false">
+            <mat-card-content>
+                <form>
+                    <mat-form-field>
+                        <mat-label>add a list</mat-label>
+                        <input [(ngModel)]="activityName" matInput name="listName" #listName (keyup.enter)="createActivity(listName.value)"> 
+                    </mat-form-field>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+
+</mat-grid-list>
+
+
+
+
+

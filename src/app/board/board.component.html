@@ -1,0 +1,22 @@
+<mat-card>
+    <mat-card-content>
+      <h4>Creating a board <span class="close-icon"><mat-icon inline="true" (click)="onClose()">close</mat-icon></span></h4>
+      <mat-divider></mat-divider>
+      <form (ngSubmit)="onSubmit()" #boardForm="ngForm">
+        <mat-form-field>
+          <mat-label>Click to enter board name</mat-label>
+          <input [(ngModel)]="formData.name" name="name" #name matInput [formControl]="nameFormControl" [errorStateMatcher]="matcher">
+          <mat-error *ngIf="nameFormControl.hasError('required')">
+            Please enter a valid baord name
+          </mat-error>
+        </mat-form-field>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="onClose()">Cancel</button>
+            <button type="submit" mat-raised-button color="primary" class="btn btn-success" [disabled]="nameFormControl.hasError('required')">Create</button>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
+  
+    
+</mat-card>
+

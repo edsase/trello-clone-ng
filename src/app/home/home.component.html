@@ -1,0 +1,9 @@
+<mat-grid-list cols="3" rowHeight="200px">
+    <mat-grid-tile>
+      <text-card></text-card>
+    </mat-grid-tile>
+    <mat-grid-tile
+        *ngFor="let project of projects">
+      <project [project-name]="project.name"></project>
+    </mat-grid-tile>
+</mat-grid-list>

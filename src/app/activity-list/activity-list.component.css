@@ -1,0 +1,10 @@
+
+.done-icon {
+    color:#1976d2;
+    margin-left: 20%;
+    cursor: pointer;
+}
+
+.strike-out {
+    text-decoration: line-through;
+}

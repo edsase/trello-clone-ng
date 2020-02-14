@@ -1,0 +1,15 @@
+mat-card {
+    display: inline-block;
+    margin-left: 2%;
+    margin-right: 2%;
+    overflow:hidden;
+    min-width: 200px;
+  
+}
+
+.close-icon {
+    float: right;
+    background-color: #FFFFFF;
+    color:#1976d2;
+   
+}

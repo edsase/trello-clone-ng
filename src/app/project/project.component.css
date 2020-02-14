@@ -1,0 +1,18 @@
+mat-card {
+    background-color: #9fe7a4;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5.5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-shadow: 0px 0px 3px #000;
+    display: inline-block;
+    margin: 1%;
+    white-space: nowrap;
+}
+
+mat-card:hover {
+    height: 20px;
+    width: 170px;
+    justify-content: center;
+    text-align: center;
+}
